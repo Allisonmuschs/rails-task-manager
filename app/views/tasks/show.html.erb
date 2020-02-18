@@ -1,0 +1,10 @@
+<body id="animate-area">
+  <h1>Tasks details</h1>
+
+  <h2><%= @tasks.title %></h2>
+  <p><%= @tasks.details %></p>
+  <%= link_to "Edit task", edit_path  %>
+  <br>
+  <br>
+  <p><%= link_to "Go back", tasks_path %>
+</body>

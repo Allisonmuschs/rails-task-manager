@@ -1,0 +1,18 @@
+<body id="animate-area">
+  <div class="center">
+    <h1 class="white">Tasks</h1>
+      <div class="container">
+        <ul>
+          <% @tasks.each do |task| %>
+          <li class="white"><%= check_box_tag task, task.completed, task.completed, completed:true %>
+          <%= link_to task.title, task_path(task), :class => "white" %>
+           <%= link_to '❌', task_path(task),
+              method: :delete,
+              data: { confirm: "Are you sure?" }, :class => "white pad" %>
+          </li>
+          <% end  %>
+        </ul>
+      </div>
+    <%= link_to "Create new task", tasks_new_path, :class => "white btn"  %>
+  </div>
+</body>
